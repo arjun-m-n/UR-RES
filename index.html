@@ -557,7 +557,9 @@
 
     /* Print Hide Modal */
     @media print {
-      .modal-overlay, .toast {
+
+      .modal-overlay,
+      .toast {
         display: none !important;
       }
     }
@@ -571,7 +573,8 @@
     <h1 class="app-title">UR RES: the resume builder</h1>
     <div class="header-actions">
       <button id="viewDbBtn" class="btn" type="button" aria-label="View Saved Download Database">
-        <span class="icon">📊</span> <span class="label">Saved Downloads</span> <span id="downloadBadge" class="badge">0</span>
+        <span class="icon">📊</span> <span class="label">Saved Downloads</span> <span id="downloadBadge"
+          class="badge">0</span>
       </button>
       <button id="themeToggle" class="btn" type="button" aria-label="Toggle light and dark theme">
         <span class="icon">🌙</span> <span class="label">Dark Mode</span>
@@ -927,6 +930,10 @@
 
     // Attach Event Listeners
     addExpBtn.addEventListener('click', () => addExperienceItem());
+    addEduBtn.addEventListener('click', () => addEducationItem());
+    resumeForm.addEventListener('input', updatePreview);
+  </script>
+
   <!-- Database Modal -->
   <div id="dbModal" class="modal-overlay">
     <div class="modal-card">
